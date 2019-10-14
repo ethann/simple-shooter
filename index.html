@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head>
+	<meta charset="utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=Cantora+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Geo' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" type="text/css" href="./styles/style.css" />
+	
+	<!-- jQ -->
+	<script type="text/javascript" src="./scripts/jquery/jquery-2.0.3.min.js"></script>
+	
+	<!-- tools -->
+	<script type="text/javascript" src="./scripts/tools.js"></script>
+	<script type="text/javascript" src="./scripts/canvas.js"></script>
+	
+	<!-- classes -->
+	<script type="text/javascript" src="./scripts/crosshair.js"></script>
+	<script type="text/javascript" src="./scripts/animatedtext.js"></script>
+	<script type="text/javascript" src="./scripts/animation.js"></script>
+	<script type="text/javascript" src="./scripts/policeman.js"></script>
+	<script type="text/javascript" src="./scripts/orb.js"></script>
+	<script type="text/javascript" src="./scripts/weapon.js"></script>
+	
+	<!-- game class -->
+	<script type="text/javascript" src="./scripts/game.js"></script>
+	<title></title>
+</head><body>
+
+	<div class="Site">
+		<div class="GameBox">
+			<canvas width="600" height="160" id="GameArea">
+				Twoja przeglądarka nie obsługuje canvasów.
+			</canvas>
+		</div>
+		<div class="Interface disabled">
+			<dl class="top-menu">
+				<dd class="choosen">News</dd>
+				<dd>Inventory</dd>
+				<dd>Map</dd>
+				<dd>Stats</dd>
+				<dd>Shop</dd>
+			</dl>
+			
+			<div class="Sub News">
+				<h1>27/10/2013 New Menu</h1>
+				<ul>
+					<li>Added 5 tabs</li>
+					<li>Game starts with select option in map.</li>
+				</ul>
+			</div>
+			
+			<div class="Sub Inventory" style="display:none;">
+			</div>
+			
+			<div class="Sub Map" style="display:none;">
+				Miasto: <a href="#" onclick="Game.Start('street');">Zacznij grę</a><br /><br />
+				Pustynia: <a href="#" onclick="Game.Start('desert');">Zacznij grę</a>
+			</div>
+			
+			<div class="Sub Stats" style="display:none;">
+			</div>
+			
+			<div class="Sub Shop" style="display:none;">
+				<fieldset><legend>Weapons</legend>
+					<div class="item weapon1"></div>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</body></html>

@@ -1,0 +1,157 @@
+/*
+	Game:
+	
+	z-index:
+		0 - bg
+
+	~creatures 
+		50-999 - monsters
+		50-999 - orbs / levitates
+	
+	~misc 
+		1000 - building
+		1001 - stats[money & lifes]
+		1019 - orbs / flying to stats
+		1020 - effects
+		1021 - score
+		2000 - FPS
+		
+	gameover/start
+		5000
+		
+	cursor
+		10000
+		
+	
+	
+@import url('game.css');
+@import url('statsbar.css');
+*/
+
+
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+body {
+	background-color: #3333ff;
+	margin:0;
+	font-size:14px;
+	font-family: georgia;
+}
+
+div.Site {
+	position:relative;
+	width:900px;
+	margin:100px auto 0;
+}
+
+div.GameBox {
+	width:600px; height:160px;
+	margin:0 150px;
+	box-shadow:0 0 0 15px rgba(255, 255, 255, 0.3);
+	line-height:0;
+}
+
+canvas#GameArea {
+	cursor:default;
+}
+
+div.Interface {
+	width: 900px;
+	margin:30px auto 0;
+	padding:5px;
+	background-color:rgba(255,255,255,0.8);
+	box-shadow:0 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+div.Interface.disabled {
+	pointer-events:none;
+	opacity:0.8;
+}
+
+div.Interface dl.top-menu{
+	height:40px;
+	padding:0;
+	margin:0;
+	
+}
+
+div.Interface dl.top-menu dd{
+	width:170px; height:40px;
+	display: block;
+	float:left;
+	padding:2px;
+	margin-left:10px;
+	border:1px solid #000;
+	background-color:rgba(50,210,70,0.6);
+	
+	font-family: Geo, 'Sans-Serif';
+	cursor:pointer;
+	
+	box-shadow:	inset -2px 2px rgba(255,255,255,0.3), 
+				inset 2px -2px rgba(0,0,0,0.3);
+}
+
+div.Interface dl.top-menu dd:hover,
+div.Interface dl.top-menu dd.choosen {
+	background-color:rgba(50,190,70,0.6);
+	box-shadow:	inset 2px -2px rgba(255,255,255,0.3), 
+				inset -2px 2px rgba(0,0,0,0.3);
+}
+
+div.Interface dl.top-menu dd:first-child{
+	margin-left:0;
+}
+
+div.Interface div.Sub {
+	clear:both;
+	width:900px;
+	margin-top:20px;
+}
+
+/*
+* NEWS
+*/
+
+div.Interface div.News h1 {
+	font-family: 'Geo';
+	
+}
+
+
+/*
+* SHOP
+*/
+div.Interface div.Shop fieldset {
+	border:2px solid #888;
+	display:inline-block;
+}
+
+div.Shop fieldset legend {
+	font-size:1em;
+	font-family:Geo;
+}
+
+div.Shop fieldset div.item {
+	width:150px; height:40px;
+	display: block;
+	padding:2px; margin:5px;
+		
+	border:1px solid #000;
+	background-color:rgba(50,210,70,0.6);
+	
+	font-family: Geo, 'Sans-Serif';
+	cursor:pointer;
+	
+	box-shadow:	inset -2px 2px rgba(255,255,255,0.3), 
+				inset 2px -2px rgba(0,0,0,0.3);
+}
+
+div.Shop fieldset div.item:hover {
+	background-color:rgba(50,190,70,0.6);
+	box-shadow:	inset 2px -2px rgba(255,255,255,0.3), 
+				inset -2px 2px rgba(0,0,0,0.3);
+}
